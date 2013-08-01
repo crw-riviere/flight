@@ -3,6 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:v="clr-namespace:RadarSim.View"
         xmlns:vm="clr-namespace:RadarSim.ViewModel"
+        xmlns:c="clr-namespace:RadarSim.View.Controls"
         Title="SimView" Height="600" Width="800">
-    <v:ZoneView />
+    <Window.DataContext>
+        <vm:SimViewModel />
+    </Window.DataContext>
+    <DockPanel>
+        <v:ZoneView DockPanel.Dock="Left" />
+        <v:ControlsView />
+    </DockPanel>
 </Window>

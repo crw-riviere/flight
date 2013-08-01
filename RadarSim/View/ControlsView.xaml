@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="RadarSim.View.ControlsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:c="clr-namespace:RadarSim.View.Controls"
+             mc:Ignorable="d">
+    <StackPanel>
+        <c:InfoDisplay />
+        <Button Content="Exec" Command="{Binding ExecSimCmd}" />
+        <c:ValueSlider
+            PropertyName="Speed"
+            PropertyValue="{Binding Speed,Mode=TwoWay}"
+            MinSliderValue="0"
+            MaxSliderValue="500" />
+    </StackPanel>
+</UserControl>

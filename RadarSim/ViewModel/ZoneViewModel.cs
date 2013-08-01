@@ -13,34 +13,17 @@ namespace RadarSim.ViewModel
 {
     public class ZoneViewModel : BaseViewModel
     {
-        public ObservableCollection<ShipViewModel> ShipCollection { get; set; }
+        public static ObservableCollection<ShipViewModel> ShipCollection { get; set; }
 
         public ZoneViewModel()
         {
-            this.ShipCollection = new ObservableCollection<ShipViewModel>()
+            ShipViewModel a = ShipViewModel.GetShip();
+            ShipViewModel b = ShipViewModel.GetShip();
+            b.TargetShip = a;
+            ShipCollection = new ObservableCollection<ShipViewModel>()
             {
-                ShipViewModel.GetShip(),
-                ShipViewModel.GetShip()
+                a,b
             };
-
-            this.Tick();
-        }
-
-        public void Tick()
-        {
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
-            timer.Tick += (o, e) => { this.MoveShips(); };
-            timer.Start();
-        }
-
-        public void MoveShips()
-        {
-            foreach (ShipViewModel ship in this.ShipCollection)
-            {
-                ship.Move();
-                //ship.ShipFire();
-            }
         }
     }
 }

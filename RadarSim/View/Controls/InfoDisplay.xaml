@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="RadarSim.View.Controls.InfoDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+>
+    <UserControl.Resources>
+        <DataTemplate x:Key="infoTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    Content="ID"
+ />
+                <TextBlock
+                    Grid.Column="1"
+                    Text="{Binding Path=ShipID}"
+                    VerticalAlignment="Center"
+ />
+
+                <Label
+                    Grid.Column="2"
+                    Content="X"
+                    VerticalAlignment="Center"
+ />
+                <TextBlock
+                    Grid.Column="3"
+                    Text="{Binding Path=CurrentPosition.X}"
+                    VerticalAlignment="Center"
+ />
+
+                <Label
+                    Grid.Column="4"
+                    Content="Y"
+                    VerticalAlignment="Center"
+ />
+                <TextBlock
+                    Grid.Column="5"
+                    Text="{Binding Path=CurrentPosition.Y}"
+                    VerticalAlignment="Center"
+ />
+                <Label
+                    Grid.Column="6"
+                    Content="O"
+                    VerticalAlignment="Center"
+ />
+                <TextBlock
+                    Grid.Column="7"
+                    Text="{Binding Path=CurrentPosition.O}"
+                    VerticalAlignment="Center"
+ />
+                <Label
+                    Grid.Column="8"
+                    Content="X Range"
+                    VerticalAlignment="Center"
+ />
+                <TextBlock
+                    Grid.Column="9"
+                    Text="{Binding Path=Radar.XRange}"
+                    VerticalAlignment="Center"
+ />
+                <Label
+                    Grid.Column="10"
+                    Content="Y Range"
+                    VerticalAlignment="Center"
+ />
+                <TextBlock
+                    Grid.Column="11"
+                    Text="{Binding Path=Radar.YRange}"
+                    VerticalAlignment="Center"
+ />
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    <ListBox
+        ItemsSource="{Binding Zone.ShipCollection}"
+        ItemTemplate="{StaticResource infoTemplate}" />
+</UserControl>

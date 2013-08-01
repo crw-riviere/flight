@@ -1,0 +1,14 @@
+﻿<DockPanel x:Class="RadarSim.View.Controls.ValueSlider"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+>
+    <Label DockPanel.Dock="Left" Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DockPanel}}, Path= PropertyName}" VerticalAlignment="Center" MinWidth="40" />
+    <TextBlock DockPanel.Dock="Left" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DockPanel}}, Path=PropertyValue}" VerticalAlignment="Center" MinWidth="20" />
+    <Slider DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center"
+            Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DockPanel}}, Path= PropertyValue}"
+            Minimum="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DockPanel}}, Path= MinSliderValue}"
+            Maximum="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DockPanel}}, Path= MaxSliderValue}" />
+</DockPanel>

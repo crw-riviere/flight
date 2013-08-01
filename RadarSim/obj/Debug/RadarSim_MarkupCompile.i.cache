@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Prog\CSharp\Flight\RadarSim\obj\Debug\
+D:\Programming\CSharp\Flight\RadarSim\obj\Debug\
 RadarSim
 none
 false
 DEBUG;TRACE
-D:\Prog\CSharp\Flight\RadarSim\App.xaml
-31812198503
+D:\Programming\CSharp\Flight\RadarSim\App.xaml
+6-228933044
 
-18-1910806049
+25847920320
 12-1401562060
-View\ShipView.xaml;View\SimView.xaml;View\ZoneView.xaml;
+View\ControlsView.xaml;View\Controls\InfoDisplay.xaml;View\Controls\ValueSlider.xaml;View\ShipView.xaml;View\SimView.xaml;View\ZoneView.xaml;
 
 False
 

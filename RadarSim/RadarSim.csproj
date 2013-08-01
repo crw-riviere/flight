@@ -57,13 +57,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Command\SimpleCommand.cs" />
     <Compile Include="Resource\Universal.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
-    <Compile Include="ViewModel\ShipViewModel.cs" />
-    <Compile Include="ViewModel\ShipViewModel.Direction.cs" />
-    <Compile Include="ViewModel\ShipViewModel.Factory.cs" />
-    <Compile Include="ViewModel\ShipViewModel.Position.cs" />
+    <Compile Include="ViewModel\ShipViewModel\ShipViewModel.cs" />
+    <Compile Include="ViewModel\ShipViewModel\Direction.cs" />
+    <Compile Include="ViewModel\ShipViewModel\ShipViewModel.Movement.cs" />
+    <Compile Include="ViewModel\ShipViewModel\ShipViewModel.Factory.cs" />
+    <Compile Include="ViewModel\ShipViewModel\Position.cs" />
+    <Compile Include="ViewModel\ShipViewModel\Sensor.cs" />
+    <Compile Include="ViewModel\SimViewModel.cs" />
     <Compile Include="ViewModel\ZoneViewModel.cs" />
+    <Compile Include="View\ControlsView.xaml.cs">
+      <DependentUpon>ControlsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\InfoDisplay.xaml.cs">
+      <DependentUpon>InfoDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\ValueSlider.xaml.cs">
+      <DependentUpon>ValueSlider.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ShipView.xaml.cs">
       <DependentUpon>ShipView.xaml</DependentUpon>
     </Compile>
@@ -102,6 +115,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\ControlsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\InfoDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Controls\ValueSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ShipView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
